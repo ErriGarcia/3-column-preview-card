@@ -1,0 +1,190 @@
+/*
+** Layout: 
+** - Mobile: 375px
+** - Desktop: 1440px
+*/
+
+:root {
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+    
+    --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-very-light-gray: hsl(0, 0%, 95%);
+
+    --font-size: 15px;
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+/*
+** Weights: 400, 700
+*/
+    --font-family-1: 'Lexend Deca', sans-serif;
+    --font-family-2: 'Big Shoulders Display', cursive;
+  }
+  
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background-3-column-card {
+    background-color: var(--color-very-light-gray);
+    text-align: left;
+    padding: 2rem 1rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-column {
+    width: 80%;
+    padding: 2rem;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icon-card {
+    width: 4rem;
+}
+
+.background-first-card {
+    background-color: var(--color-bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.title-card {
+    color: var(--color-very-light-gray);
+    font-family: var(--font-family-2);
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem 0rem;
+}
+
+.paragraph-card {
+    color: var(--color-transparent-white);
+    font-family: var(--font-family-1);
+    font-size: var(--font-size);
+    line-height: 1.5rem;
+}
+
+.learn-more-button {
+    background-color: var(--color-very-light-gray);
+    font-family: var(--font-family-1);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    padding: 0.75rem 2rem;
+    border-style: none;
+    margin-top: 1.5rem;
+    width: 10rem;
+}
+
+.learn-more-button:hover {
+    cursor: pointer;
+}
+
+.learn-more-button-1 {
+    color: var(--color-bright-orange);
+}
+
+.learn-more-button-1:hover {
+    background-color: var(--color-bright-orange);
+    color: var(--color-very-light-gray);
+    border-color: var(--color-very-light-gray);
+    border-style: solid;
+}
+
+.background-second-card {
+    background-color: var(--color-dark-cyan);
+}
+
+.learn-more-button-2 {
+    color: var(--color-dark-cyan);
+}
+
+.learn-more-button-2:hover {
+    background-color: var(--color-dark-cyan);
+    color: var(--color-very-light-gray);
+    border-color: var(--color-very-light-gray);
+    border-style: solid;
+}
+
+.background-third-card {
+    background-color: var(--color-very-dark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.learn-more-button-3 {
+    color: var(--color-very-dark-cyan);
+}
+
+.learn-more-button-3:hover {
+    background-color: var(--color-very-dark-cyan);
+    color: var(--color-very-light-gray);
+    border-color: var(--color-very-light-gray);
+    border-style: solid;
+}
+
+/* DESKTOP version */
+
+@media screen and (min-width: 800px) {
+
+    html,body {
+        height:100%;
+        min-height:100%;
+        max-height:100%;
+      }
+
+    .background-3-column-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .card-column {
+        height: 80%;
+        width: 30%;
+        max-width: 280px;
+        max-height: 500px;
+        padding: 2.5rem;
+    }
+
+    .background-first-card {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .background-third-card {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .title-card, .paragraph-card {
+        margin-top: 2rem;
+    }
+
+    .learn-more-button {
+        margin-top: 4rem;
+    }
+
+}
